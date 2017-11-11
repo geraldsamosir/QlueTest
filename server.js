@@ -55,11 +55,11 @@ app.get('/', function(request, response) {
 })
 
 
-app.get("/listUser",function(req,res){
-    res.json({
-        message: "ok"
-    })
-})
+// app.get("/listUser",function(req,res){
+//     res.json({
+//         message: "ok"
+//     })
+// })
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
