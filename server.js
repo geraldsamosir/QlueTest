@@ -50,7 +50,7 @@ const ControllerUser = new (
 app.set('port', (process.env.PORT || 5000))
 
 
-app.get('/listUser', function(request, response) {
+app.get('/', function(request, response) {
   response.send('Welcome to Qlue Test by : Gerald halomoan Samosir')
 })
 
