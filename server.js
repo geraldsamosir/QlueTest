@@ -55,8 +55,8 @@ app.get('/', function(request, response) {
 })
 
 
-app.get("/listUser",function(req,res){
-    res.json({
+app.get("/listUser",function(request, response){
+    response.json({
         message: "ok"
     })
 })
