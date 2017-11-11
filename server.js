@@ -25,15 +25,22 @@ const ModelUsers = new (
 const ControllerUser = new ( 
   class _ControllerUser {
 
-    async getall(req,res){
-        let User =  await ModelUsers.getall()
-        if(User !=""){
-          res.status(200)
-          res.json({
-            respond :"success",
-            result : User
-          })
-        }
+      getall(req,res){
+         ModelUsers.getall()
+         .then((result)=>{
+            res.status(200)
+            res.json({
+              respond :"success",
+              result : result
+            })
+         })
+        // if(User !=""){
+        //   res.status(200)
+        //   res.json({
+        //     respond :"success",
+        //     result : User
+        //   })
+        // }
     }
 
   }
