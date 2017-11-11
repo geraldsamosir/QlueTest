@@ -61,7 +61,7 @@ app.get('/', function(request, response) {
 })
 
 
-app.get("/listUser", test.testfing)
+//app.get("/listUser", test.testfing)
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
