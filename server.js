@@ -5,7 +5,7 @@ app.set('port', (process.env.PORT || 5000))
 
 
 app.get('/', function(request, response) {
-  response.send('Hello Qlue!')
+  response.send('Hello Qlue! update')
 })
 
 app.listen(app.get('port'), function() {
