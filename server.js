@@ -1,43 +1,43 @@
 const express = require('express')
 const app = express()
 
-const knex =  require('knex')({
-    client: 'mysql',
-    connection: {
-      host     : 'sql36.main-hosting.eu',
-      user     : 'u709419413_qlue',
-      password : 'gerald_samosir',
-      database : 'u709419413_qlue'
-    }
-});
+// const knex =  require('knex')({
+//     client: 'mysql',
+//     connection: {
+//       host     : 'sql36.main-hosting.eu',
+//       user     : 'u709419413_qlue',
+//       password : 'gerald_samosir',
+//       database : 'u709419413_qlue'
+//     }
+// });
 
-const ModelUsers = new ( 
-    class _ModelUsers  {
+// const ModelUsers = new ( 
+//     class _ModelUsers  {
 
-      getall(req,res){
-        return knex("user")
-      }
+//       getall(req,res){
+//         return knex("user")
+//       }
 
-    }
-)
+//     }
+// )
 
 
-const ControllerUser = new ( 
-  class _ControllerUser {
+// const ControllerUser = new ( 
+//   class _ControllerUser {
 
-    async getall(req,res){
-        let User =  await ModelUsers.getall()
-        if(User !=""){
-          res.status(200)
-          res.json({
-            respond :"success",
-            result : User
-          })
-        }
-    }
+//     async getall(req,res){
+//         let User =  await ModelUsers.getall()
+//         if(User !=""){
+//           res.status(200)
+//           res.json({
+//             respond :"success",
+//             result : User
+//           })
+//         }
+//     }
 
-  }
-)
+//   }
+// )
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -47,7 +47,7 @@ app.get('/', function(request, response) {
 })
 
 
-app.get("/listUser", ControllerUser.getall)
+// app.get("/listUser", ControllerUser.getall)
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
