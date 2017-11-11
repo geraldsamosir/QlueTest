@@ -4,10 +4,10 @@ const app = express()
 const knex =  require('knex')({
     client: 'mysql',
     connection: {
-      host     : 'localhost',
-      user     : 'root',
-      password : '',
-      database : 'qlue'
+      host     : 'sql36.main-hosting.eu',
+      user     : 'u709419413_qlue',
+      password : 'gerald_samosir',
+      database : 'u709419413_qlue'
     }
 });
 
