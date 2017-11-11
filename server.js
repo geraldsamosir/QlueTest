@@ -25,27 +25,19 @@ const ModelUsers = new (
 const ControllerUser = new ( 
   class _ControllerUser {
 
-      getall(req,res){
-         ModelUsers.getall()
-         .then((result)=>{
-            res.status(200)
-            res.json({
-              respond :"success",
-              result : result
-            })
-         })
-        // if(User !=""){
-        //   res.status(200)
-        //   res.json({
-        //     respond :"success",
-        //     result : User
-        //   })
-        // }
+    async getall(req,res){
+        let User =  await ModelUsers.getall()
+        if(User !=""){
+          res.status(200)
+          res.json({
+            respond :"success",
+            result : User
+          })
+        }
     }
 
   }
 )
-
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -55,11 +47,7 @@ app.get('/', function(request, response) {
 })
 
 
-// app.get("/listUser",function(request, response){
-//     response.json({
-//         message: "ok"
-//     })
-// })
+//app.get("/listUser", ControllerUser.getall)
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
