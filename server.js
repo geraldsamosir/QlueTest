@@ -1,12 +1,53 @@
 const express = require('express')
 const app = express()
 
+const knex =  require('knex')({
+    client: 'mysql',
+    connection: {
+      host     : 'localhost',
+      user     : 'root',
+      password : '',
+      database : 'qlue'
+    }
+});
+
+const ModelUsers = new ( 
+    class _ModelUsers  {
+
+      getall(req,res){
+        return knex("user")
+      }
+
+    }
+)
+
+
+const ControllerUser = new ( 
+  class _ControllerUser {
+
+    async getall(req,res){
+        let User =  await ModelUsers.getall()
+        if(User !=""){
+          res.status(200)
+          res.json({
+            respond :"success",
+            result : User
+          })
+        }
+    }
+
+  }
+)
+
 app.set('port', (process.env.PORT || 5000))
 
 
 app.get('/', function(request, response) {
-  response.send('Hello Qlue! update')
+  response.send('Welcome to Qlue Test by : Gerald halomoan Samosir')
 })
+
+
+app.get("/listUser", ControllerUser.getall)
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
