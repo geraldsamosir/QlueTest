@@ -14,4 +14,12 @@ untuk mengganti  port tinggal mengganti
 app.set('port', (process.env.PORT || 5000))
 ```
 
+pada file server.js
+
+untuk migrate database
+
+``` 
+    knex migrate:latest
+```
+
 sesuai dengan port yang anda inginkan 
