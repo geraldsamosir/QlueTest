@@ -1,6 +1,0 @@
-{
-  "name": "Qlue",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/geraldsamosir/QlueTest",
-  "keywords": ["node", "express", "static"]
-}
