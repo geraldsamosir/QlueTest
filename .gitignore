@@ -1,3 +1,5 @@
 node_modules/
+migration/
+knexfile.js
 npm-debug.log
 package-lock.json
