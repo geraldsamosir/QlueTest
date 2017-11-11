@@ -46,7 +46,11 @@ const ControllerUser = new (
   }
 )
 
-
+const test = {
+    testfing : function(req,res){
+        res.json({messsage: "ok" })
+    }
+}
 
 app.set('port', (process.env.PORT || 5000))
 
