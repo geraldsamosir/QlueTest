@@ -2,7 +2,7 @@
   "name": "Qlue",
   "version": "0.2.0",
   "description": "Qlue test",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
