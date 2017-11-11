@@ -50,16 +50,16 @@ const ControllerUser = new (
 app.set('port', (process.env.PORT || 5000))
 
 
-app.get('/', function(request, response) {
+app.get('/listUser', function(request, response) {
   response.send('Welcome to Qlue Test by : Gerald halomoan Samosir')
 })
 
 
-app.get("/listUser",function(request, response){
-    response.json({
-        message: "ok"
-    })
-})
+// app.get("/listUser",function(request, response){
+//     response.json({
+//         message: "ok"
+//     })
+// })
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
