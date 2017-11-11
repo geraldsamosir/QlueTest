@@ -11,33 +11,33 @@ const knex =  require('knex')({
     }
 });
 
-// const ModelUsers = new ( 
-//     class _ModelUsers  {
+const ModelUsers = new ( 
+    class _ModelUsers  {
 
-//       getall(req,res){
-//         return knex("user")
-//       }
+      getall(req,res){
+        return knex("user")
+      }
 
-//     }
-// )
+    }
+)
 
 
-// const ControllerUser = new ( 
-//   class _ControllerUser {
+const ControllerUser = new ( 
+  class _ControllerUser {
 
-//     async getall(req,res){
-//         let User =  await ModelUsers.getall()
-//         if(User !=""){
-//           res.status(200)
-//           res.json({
-//             respond :"success",
-//             result : User
-//           })
-//         }
-//     }
+    async getall(req,res){
+        let User =  await ModelUsers.getall()
+        if(User !=""){
+          res.status(200)
+          res.json({
+            respond :"success",
+            result : User
+          })
+        }
+    }
 
-//   }
-// )
+  }
+)
 
 app.set('port', (process.env.PORT || 5000))
 
