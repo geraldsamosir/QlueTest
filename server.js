@@ -34,9 +34,6 @@ const ControllerUser = {
               result : result
             })
         })
-        .catch(function(err){
-            res.send(err)
-        })
 
     }
 
